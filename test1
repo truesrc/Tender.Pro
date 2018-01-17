@@ -1,0 +1,5 @@
+http://www.tender.pro/api/_info.tenderlist_by_set.json?_key=1732ede4de680a0c93d81f01d7bac7d1&set_type_id=1&set_id=19934&max_rows=3&open_only=true
+
+http://www.tender.pro/api/_tender.info.json?_key=1732ede4de680a0c93d81f01d7bac7d1&company_id=19934&id=301369
+
+http://www.tender.pro/api/_company.info_public.json?id=19934
