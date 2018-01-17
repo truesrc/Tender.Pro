@@ -23,7 +23,7 @@ Scenario('UI тест', (I) => {
     I.fillField('#phone', '+7-912-866-12-34');
 	I.checkOption('#agreement');	
 	I.click('button');
-   });
+    });
    I.waitForText('Благодарим Вас за регистрацию!', 5);
    I.see('Благодарим Вас за регистрацию!');
    
