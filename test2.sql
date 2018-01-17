@@ -13,7 +13,7 @@ LEFT JOIN (  SELECT  t2.site_area_id, t2.design_id
 ORDER BY  site_area.site_area_id;
 
 Итого:
-user_id 	site_id 	site_area_id 	design_id
+user_id site_id site_area_id 	design_id
 71378 	142778 	382965 	NULL
 71618 	142901 	383508 	373810
 72042 	143087 	383589 	380053
@@ -28,7 +28,7 @@ user_id 	site_id 	site_area_id 	design_id
 82021 	152110 	517358 	387472
 64266 	155425 	526366 	390654
 46987 	156307 	526396 	390677
-402 	    334 	534732 	393974
+402 	334 	534732 	393974
 66984 	162574 	541087 	395991
 66984 	180779 	557822 	400914
 9331   	9536 	562669 	403869
