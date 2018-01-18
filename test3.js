@@ -34,34 +34,33 @@ Scenario('UI тест', (I) => {
 Используется CodeceptJS + NodeJS + Selenium WebDriver.
 */ 
 Scenario('REST API test ', function*(I){
- unirest.get('http://www.tender.pro/api/_company.info_public.json?id=198').end((responseFromApi) => {
-	let response = JSON.parse(responseFromApi.body);
-	let expectedAttributes = [
-    "address_legal",
-    "title_full",
-    "anno_short", 
-    "rating",
-    "is_seller_producer",
-    "country_id", 
-    "fax", 
-    "is_type_seller",
-    "address",
-    "id",
-    "anno",
-    "type_name",
-    "country_name",
-    "phone",
-    "seller_type_name",
-    "kpp",
-    "inn",
-    "site",
-    "title"
- ];
+    unirest.get('http://www.tender.pro/api/_company.info_public.json?id=198').end((responseFromApi) => {
+        let response = JSON.parse(responseFromApi.body);
+        let expectedAttributes = [
+           "address_legal",
+           "title_full",
+           "anno_short",
+           "rating",
+           "is_seller_producer",
+           "country_id",
+           "fax",
+           "is_type_seller",
+           "address",
+           "id",
+           "anno",
+           "type_name",
+           "country_name",
+           "phone",
+           "seller_type_name",
+           "kpp",
+           "inn",
+           "site",
+           "title"
+        ];
 
-	let receivedAttributes = Object.keys(response.result.data);
-	assert.deepEqual(expectedAttributes, receivedAttributes);
-	assert.equal(response.result.data.address_legal, '650608, Россия, Абак, Советск, 244, 65'); 
+    let receivedAttributes = Object.keys(response.result.data);
+    assert.deepEqual(expectedAttributes, receivedAttributes);
+    assert.equal(response.result.data.address_legal, '650608, Россия, Абак, Советск, 244, 65');
 
     });
 });
-
