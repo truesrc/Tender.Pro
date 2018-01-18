@@ -44,7 +44,7 @@ Scenario('REST API test ', function*(I){
         "is_seller_producer",
         "country_id", 
         "fax", 
-		"is_type_seller",
+        "is_type_seller",
         "address",
         "id",
         "anno",
@@ -52,7 +52,7 @@ Scenario('REST API test ', function*(I){
         "country_name",
         "phone",
         "seller_type_name",
-	    "kpp",
+        "kpp",
         "inn",
         "site",
         "title"
