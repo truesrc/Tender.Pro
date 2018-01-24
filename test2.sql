@@ -3,7 +3,10 @@ user.user_id
 , site.site_id
 , site_area.site_area_id
 , site_area.name as area_name
-, t3.design_id 
+, COALESCE( t3.design_id, ( SELECT t5.site_area_design_1_id 
+                                          FROM  site_area_design_1 t5 
+                                          WHERE t5.site_area_id=site_area.site_area_id 
+                                          LIMIT 1)) AS design_id
 , t3.cpm
 FROM site_area 
 JOIN site  ON site_area.parent_id =  site.site_id
