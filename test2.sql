@@ -1,3 +1,22 @@
+SELECT  
+user.user_id
+, site.site_id
+, site_area.site_area_id
+, site_area.name as area_name
+, t3.design_id 
+, t3.result
+FROM site_area 
+JOIN site  ON site_area.parent_id =  site.site_id
+JOIN user ON user.user_id = site.user_id
+LEFT JOIN (  SELECT  t2.site_area_id, t2.design_id, t2.result
+             FROM (
+                 SELECT t1.site_area_id, t1.design_id, sum(`partner_gain`)/sum(`view_count`) *1000 AS result
+                 FROM stat_design_cache t1
+                 GROUP BY t1.design_id
+                 ORDER BY result desc) t2
+             GROUP BY t2.site_area_id
+           ) t3 ON t3.site_area_id = site_area.site_area_id
+ORDER BY  site_area.site_area_id;
 Итого:
 user_id	site_id	site_area_id	area_name			design_id	result
 71378	142778	382965		block_15_			NULL		NULL		любой 384244
